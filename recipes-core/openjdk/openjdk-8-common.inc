@@ -176,6 +176,8 @@ def get_llvm_configure_arch(d):
         arch = "x86"
     elif arch == "arm":
         arch = "arm"
+    elif arch == "arm64" or arch == "aarch64":
+        arch = "aarch64"
     elif arch == "mipsel" or arch == "mips":
         arch = "mips"
     elif arch == "powerpc" or arch == "powerpc64":
@@ -198,6 +200,8 @@ def get_jdk_arch(d):
         jdk_arch = "amd64"
     elif jdk_arch == "arm":
         jdk_arch = "aarch32"
+    elif jdk_arch == "arm64":
+        jdk_arch = "aarch64"
     elif jdk_arch == "powerpc":
         jdk_arch = "ppc"
     elif jdk_arch == "powerpc64":
